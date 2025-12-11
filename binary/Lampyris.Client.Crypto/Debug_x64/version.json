@@ -1,0 +1,9 @@
+{
+  "Version": "20251211.3",
+  "Md5": {
+    "Lampyris.Client.Crypto.dll": "fce1e8300db6543a88624fa026473c47",
+    "libprotobufd.dll": "74584015d08bfef8b521994201f7f6d5",
+    "abseil_dll.dll": "84944c3e892194d24ba1f7a385d4dba6",
+    "zlibd1.dll": "562bb91d750be377b46d61d51654473c"
+  }
+}

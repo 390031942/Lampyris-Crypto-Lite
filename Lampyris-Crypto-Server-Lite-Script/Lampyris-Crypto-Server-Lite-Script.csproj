@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>Lampyris_Crypto_Server_Lite_Script</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lampyris-Crypto-Server-Lite\Lampyris-Crypto-Server-Lite.csproj" />
+  </ItemGroup>
+
+</Project>

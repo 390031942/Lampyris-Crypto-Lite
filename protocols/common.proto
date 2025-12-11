@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+// 自动生成的 common.proto 文件
+
+package lampyris.crypto.protocol.common;
+
+import "quote.proto";
+import "trading.proto";
+import "app.proto";
+import "strategy.proto";
+
+message Request {
+    oneof request_type {
+        lampyris.crypto.protocol.quote.ReqSubscribeTickerData reqSubscribeTickerData = 1;
+        lampyris.crypto.protocol.quote.ReqSubscribeTradeData reqSubscribeTradeData = 2;
+        lampyris.crypto.protocol.quote.ReqSubscribeCandlestickUpdate reqSubscribeCandlestickUpdate = 3;
+        lampyris.crypto.protocol.quote.ReqCandlestickQuery reqCandlestickQuery = 4;
+        lampyris.crypto.protocol.quote.ReqTradeRule reqTradeRule = 5;
+        lampyris.crypto.protocol.quote.ReqSelfSelectedSymbol reqSelfSelectedSymbol = 6;
+        lampyris.crypto.protocol.trading.ReqPlaceOrder reqPlaceOrder = 7;
+        lampyris.crypto.protocol.trading.ReqModifyOrder reqModifyOrder = 8;
+        lampyris.crypto.protocol.trading.ReqCancelOrder reqCancelOrder = 9;
+        lampyris.crypto.protocol.trading.ReqOneKeyClosePosition reqOneKeyClosePosition = 10;
+        lampyris.crypto.protocol.trading.ReqQueryActiveOrders reqQueryActiveOrders = 11;
+        lampyris.crypto.protocol.trading.ReqQueryHistoricalOrders reqQueryHistoricalOrders = 12;
+        lampyris.crypto.protocol.trading.ReqQueryPositions reqQueryPositions = 13;
+        lampyris.crypto.protocol.trading.ReqSetLeverage reqSetLeverage = 14;
+        lampyris.crypto.protocol.trading.ReqQueryLeverage reqQueryLeverage = 15;
+        lampyris.crypto.protocol.trading.ReqQueryLeverageBracket reqQueryLeverageBracket = 16;
+        lampyris.crypto.protocol.app.ReqHeartBeat reqHeartBeat = 17;
+        lampyris.crypto.protocol.app.ReqServerLogQuery reqServerLogQuery = 18;
+        lampyris.crypto.protocol.strategy.ReqStrategyAdd reqStrategyAdd = 19;
+        lampyris.crypto.protocol.strategy.ReqStrategyRemove reqStrategyRemove = 20;
+        lampyris.crypto.protocol.strategy.ReqStrategyAbort reqStrategyAbort = 21;
+        lampyris.crypto.protocol.strategy.ReqStrategyEnableStatus reqStrategyEnableStatus = 22;
+        lampyris.crypto.protocol.strategy.ReqStrategyQuery reqStrategyQuery = 23;
+        lampyris.crypto.protocol.strategy.ReqStrategyUpgrade reqStrategyUpgrade = 24;
+        lampyris.crypto.protocol.strategy.ReqStrategyExecutionHistory reqStrategyExecutionHistory = 25;
+        lampyris.crypto.protocol.strategy.ReqStrategyExecutionLog reqStrategyExecutionLog = 26;
+    }
+}
+
+message Response {
+    oneof response_type {
+        lampyris.crypto.protocol.quote.ResSubscribeTickerData resSubscribeTickerData = 1;
+        lampyris.crypto.protocol.quote.ResCandlestickQuery resCandlestickQuery = 2;
+        lampyris.crypto.protocol.quote.ResTradeRule resTradeRule = 3;
+        lampyris.crypto.protocol.quote.ResSelfSelectedSymbol resSelfSelectedSymbol = 4;
+        lampyris.crypto.protocol.quote.ResMarketPreviewData resMarketPreviewData = 5;
+        lampyris.crypto.protocol.trading.ResQueryOrders resQueryOrders = 6;
+        lampyris.crypto.protocol.trading.ResQueryPositions resQueryPositions = 7;
+        lampyris.crypto.protocol.trading.ResQueryLeverage resQueryLeverage = 8;
+        lampyris.crypto.protocol.trading.ResQueryLeverageBracket resQueryLeverageBracket = 9;
+        lampyris.crypto.protocol.app.ResHeartBeat resHeartBeat = 10;
+        lampyris.crypto.protocol.app.ResClientMessage resClientMessage = 11;
+        lampyris.crypto.protocol.app.ResServerLogQuery resServerLogQuery = 12;
+        lampyris.crypto.protocol.app.ResServerLogPush resServerLogPush = 13;
+        lampyris.crypto.protocol.strategy.ResStrategyEnableStatus resStrategyEnableStatus = 14;
+        lampyris.crypto.protocol.strategy.ResStrategyList resStrategyList = 15;
+        lampyris.crypto.protocol.strategy.ResStrategyUpgrade resStrategyUpgrade = 16;
+        lampyris.crypto.protocol.strategy.ResStrategyExecutionHistory resStrategyExecutionHistory = 17;
+        lampyris.crypto.protocol.strategy.ResStrategyExecutionLog resStrategyExecutionLog = 18;
+    }
+}

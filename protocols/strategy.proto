@@ -1,0 +1,98 @@
+syntax = "proto3";
+
+package lampyris.crypto.protocol.strategy;
+
+/*---------- 策略配置 数据 ----------*/
+
+message StrategyAbovePercentageMakeProfitBean {
+    double perc = 1; // 触发止盈 的涨幅
+    double ratio = 2; // 卖出比例(0-1)
+    double moveStopPerc = 3; // 移动止盈出局 的涨幅
+    bool enabled = 4; // 是否生效
+    int32 sellOrderId = 5; // 卖出订单ID
+    int32 moveSellOrderId = 6; // 移动止盈卖出订单ID
+}
+
+message StrategyAbovePercentageBean {
+    double triggerPerc = 1; // 触发涨幅
+    optional double stopLossPerc = 2; // 止损时涨幅
+    optional double buyRatio = 3; // 购买比例(0-1)之间
+    optional double buyMoney = 4; // 购买的金额
+    repeated StrategyAbovePercentageMakeProfitBean makeProfitBeanList = 5;
+}
+
+message StrategyBean {
+    string symbol = 1; // 指定的符号对，如果为空，则说明为通用策略
+    bool enabled = 2;
+    repeated string bannedSymbolList = 3;
+    optional int32 strategyUID = 4; // 如果为0，则说明为通用策略
+    string timeInForceParam = 5;
+    int32 status = 6;
+
+    oneof ImplementBean {
+        StrategyAbovePercentageBean strategyAbovePercentageBean = 7;
+    };
+}
+
+message ReqStrategyAdd {
+    StrategyBean bean = 1;
+}
+
+message ReqStrategyRemove {
+    int32 strategyUId = 1; // 0表示策略执行总控制
+}
+
+message ReqStrategyAbort {
+    int32 strategyUId = 1; // 0表示策略执行总控制
+    string param = 2;
+}
+
+message ReqStrategyEnableStatus {
+    int32 strategyUId = 1; // 0表示策略执行总控制
+    bool enabled = 2;
+}
+
+message ResStrategyEnableStatus {
+    int32 strategyUId = 1; // 0表示策略执行总控制
+    bool enabled = 2;
+}
+
+message ReqStrategyQuery {
+    string symbol = 1;
+}
+
+message ResStrategyList {
+    repeated StrategyBean beanList = 1;
+}
+
+message ReqStrategyUpgrade {
+    StrategyBean bean = 1;
+}
+
+message ResStrategyUpgrade {
+    StrategyBean bean = 1;
+}
+
+message ReqStrategyExecutionHistory {
+    string symbol = 1;
+}
+
+message StrategyExecutionHistoryBean {
+    string symbol = 1;
+    int64 triggeredTime = 2;
+    string lastAction = 3;
+    int64 lastActionTime = 4;
+}
+
+message ResStrategyExecutionHistory {
+    repeated StrategyExecutionHistoryBean beanList = 1;
+}
+
+message ReqStrategyExecutionLog {
+    int32 strategyUId = 1; // 0表示策略执行总控制
+}
+
+message ResStrategyExecutionLog {
+    repeated string logList = 1; 
+    bool isIncrement = 2; // 是否增量
+}

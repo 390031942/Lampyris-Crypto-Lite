@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package lampyris.crypto.protocol.app;
+
+message ReqHeartBeat {
+    int64 clientTime = 1; // 客户端时间
+    bool isForeground = 2; // 客户端是否置于前台
+}
+
+// 响应-服务端发送心跳包
+message ResHeartBeat {
+    int64 serverTime = 1; // 服务端时间
+}
+
+// 响应-客户端弹窗消息
+message ResClientMessage {
+    string content = 1;
+    int32 messageType = 2;
+    optional string param = 3;
+}
+
+// 请求-查询服务端日志
+message ReqServerLogQuery {
+    optional int32 startIndex = 1;
+    optional int32 endIndex = 2;
+}
+
+// 响应-查询服务端日志
+message ResServerLogQuery {
+    int32 startIndex = 1;
+    int32 endIndex = 2;
+    repeated string logList = 3;
+}
+
+// 响应-服务端日志推送
+message ResServerLogPush {
+    int32 index = 1;
+    string log = 2;
+}
+/*---------------------------------*/ 

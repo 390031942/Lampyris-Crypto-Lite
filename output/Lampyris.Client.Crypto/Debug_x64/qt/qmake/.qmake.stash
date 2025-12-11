@@ -1,0 +1,31 @@
+QMAKE_CXX.QT_COMPILER_STDCXX = 199711L
+QMAKE_CXX.QMAKE_MSC_VER = 1943
+QMAKE_CXX.QMAKE_MSC_FULL_VER = 194334810
+QMAKE_CXX.COMPILER_MACROS = \
+    QT_COMPILER_STDCXX \
+    QMAKE_MSC_VER \
+    QMAKE_MSC_FULL_VER
+QMAKE_CXX.INCDIRS = \
+    F:\\Sources\\Lampyris-Crypto-Lite\\Lampyris.Client.Crypto\\third-party\\protobuf\\includes \
+    F:\\Sources\\Lampyris-Crypto-Lite\\Lampyris.Client.Crypto\\sources \
+    F:\\Sources\\Lampyris-Crypto-Lite\\Lampyris.Client.Common\\includes \
+    F:\\Software\\VS2022\\VC\\Tools\\MSVC\\14.43.34808\\include \
+    F:\\Software\\VS2022\\VC\\Tools\\MSVC\\14.43.34808\\atlmfc\\include \
+    F:\\Software\\VS2022\\VC\\Auxiliary\\VS\\include \
+    "D:\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt" \
+    F:\\Software\\VS2022\\VC\\Auxiliary\\VS\\UnitTest\\include \
+    "D:\\Windows Kits\\10\\Include\\10.0.22621.0\\um" \
+    "D:\\Windows Kits\\10\\Include\\10.0.22621.0\\shared" \
+    "D:\\Windows Kits\\10\\Include\\10.0.22621.0\\winrt" \
+    "D:\\Windows Kits\\10\\Include\\10.0.22621.0\\cppwinrt" \
+    "C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8.1\\Include\\um" \
+    F:\\vcpkg\\installed\\x64-windows\\include
+QMAKE_CXX.LIBDIRS = \
+    F:\\Sources\\Lampyris-Crypto-Lite\\Lampyris.Client.Crypto\\third-party\\protobuf\\libs \
+    F:\\Software\\VS2022\\VC\\Tools\\MSVC\\14.43.34808\\lib\\x64 \
+    F:\\Software\\VS2022\\VC\\Tools\\MSVC\\14.43.34808\\atlmfc\\lib\\x64 \
+    F:\\Software\\VS2022\\VC\\Auxiliary\\VS\\lib\\x64 \
+    "D:\\Windows Kits\\10\\lib\\10.0.22621.0\\ucrt\\x64" \
+    F:\\Software\\VS2022\\VC\\Auxiliary\\VS\\UnitTest\\lib \
+    "D:\\Windows Kits\\10\\lib\\10.0.22621.0\\um\\x64" \
+    "C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8.1\\lib\\um\\x64"
