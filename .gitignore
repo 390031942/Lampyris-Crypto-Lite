@@ -363,5 +363,5 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # Lampyris项目输出
-.binary
-.output
+binary/
+output/
