@@ -116,9 +116,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <QtRcc Include="LampyrisClientLauncher.qrc" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="sources\LauncherManager.cpp" />
     <ClCompile Include="sources\LauncherWidget.cpp" />
     <ClCompile Include="sources\main.cpp" />
@@ -133,6 +130,9 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="sources\SingletonApp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="resources\main.qrc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
