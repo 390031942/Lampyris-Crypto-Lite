@@ -19,10 +19,10 @@ public:
     void             setDistributionBarHeight(int height);              
     void             setDistributionBarSpacing(int spacing);     
     void             setExpectedIntervals(std::initializer_list<int> list);
+    void             updateSumamryData(const MarketSummaryData& data);
 protected:         
     void             paintEvent(QPaintEvent* event) override;
 private:           
-    void             updateSumamryData(const MarketSummaryData& data);
     // 涨跌分布区域数据列表
     DataList         m_data;
     // 间隔列表,如{-10,-5,0,5,10},则会展示 

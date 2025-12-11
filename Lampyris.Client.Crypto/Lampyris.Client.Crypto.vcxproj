@@ -152,6 +152,7 @@ $(SolutionDir)binary\Lampyris.ResourceVersionControlTool\$(Configuration)\net8.0
     <ClInclude Include="sources\AppSystem\Quote\Data\SymbolTradeRule.h" />
     <QtMoc Include="sources\UI\Common\TabButtonItem.h" />
     <QtMoc Include="sources\UI\Common\TabButtonView.h" />
+    <ClInclude Include="sources\UIControlDemoWidget.h" />
     <ClInclude Include="sources\UI\Common\CrossPlatformWidget.h" />
     <ClInclude Include="sources\UI\Common\Trade\TradeComboBox.h" />
     <QtMoc Include="sources\UI\Common\Trade\TradeLineEdit.h" />
@@ -214,13 +215,19 @@ $(SolutionDir)binary\Lampyris.ResourceVersionControlTool\$(Configuration)\net8.0
     <ClCompile Include="sources\AppSystem\Quote\Util\QuoteUtil.cpp" />
     <ClCompile Include="sources\AppSystem\Trade\Manager\TradeManager.cpp" />
     <ClCompile Include="sources\Network\WebSocketClient.cpp" />
-    <ClCompile Include="sources\PluginEntryPoint.cpp" />
+    <ClCompile Include="sources\PluginEntryPoint.cpp">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">input</DynamicSource>
+      <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).moc</QtMocFileName>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">input</DynamicSource>
+      <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).moc</QtMocFileName>
+    </ClCompile>
     <ClCompile Include="sources\Protocol\account.cpp" />
     <ClCompile Include="sources\Protocol\app.cpp" />
     <ClCompile Include="sources\Protocol\common.cpp" />
     <ClCompile Include="sources\Protocol\quote.cpp" />
     <ClCompile Include="sources\Protocol\strategy.cpp" />
     <ClCompile Include="sources\Protocol\trading.cpp" />
+    <ClCompile Include="sources\UIControlDemoWidget.cpp" />
     <ClCompile Include="sources\UI\Common\AbstractScrollItem.cpp" />
     <ClCompile Include="sources\UI\Common\AmountText.cpp" />
     <ClCompile Include="sources\UI\Common\AssetTrendCurveWidget.cpp" />

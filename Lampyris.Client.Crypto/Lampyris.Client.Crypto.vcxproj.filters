@@ -195,6 +195,9 @@
     <ClInclude Include="sources\UI\Standalone\Main\MainToolBar.h">
       <Filter>Source Files\UI\Standalone\Main</Filter>
     </ClInclude>
+    <ClInclude Include="sources\UIControlDemoWidget.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="sources\AppSystem\Trade\Manager\TradeManager.cpp">
@@ -214,9 +217,6 @@
     </ClCompile>
     <ClCompile Include="sources\Util\DateTimeUtil.cpp">
       <Filter>Source Files\Util</Filter>
-    </ClCompile>
-    <ClCompile Include="sources\PluginEntryPoint.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="sources\Protocol\app.cpp">
       <Filter>Source Files\Protocol</Filter>
@@ -358,6 +358,12 @@
     </ClCompile>
     <ClCompile Include="sources\UI\Standalone\Trade\TradeWidget.cpp">
       <Filter>Source Files\UI\Standalone\Trade</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\UIControlDemoWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\PluginEntryPoint.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
